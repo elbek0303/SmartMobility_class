@@ -1,12 +1,32 @@
-# Turtle_Install_explanation_for_class
-It is for smart mobility lab class
-I did installation for ros 2:
-![image](https://user-images.githubusercontent.com/90163078/192183742-f56f8e38-8357-4ecd-a49b-6c5ae1c610be.png)
-"ros2 pkg executables turtlesim " this command is for getting the list of executables
-![image](https://user-images.githubusercontent.com/90163078/192183895-a2006cd7-8199-4497-9710-b9746c471ff0.png)
-"ros2 run turtlesim turtlesim_node" this opens up the turtle page.
-"sudo apt install ~nros-foxy-rqt*" I installed rqt with it.
+Updated Readme file.
 
-![image](https://user-images.githubusercontent.com/90163078/192184281-a55a2403-9c3b-4492-aceb-3d91de874901.png)
+1.Installing turtle.
+asadbek@ubuntu:~$ sudo apt update
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://packages.ros.org/ros/ubuntu focal InRelease                        
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal InRelease                       
+Hit:4 http://packages.ros.org/ros2/ubuntu focal InRelease                       
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease               
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:8 http://archive.canonical.com/ubuntu focal InRelease                
+Fetched 222 kB in 5s (43.1 kB/s)
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+26 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
-When I used rqt the turtle creates a tirectory act to different directions
+asadbek@ubuntu:~$ sudo apt install ros-foxy-turtlesim
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ros-foxy-turtlesim is already the newest version (1.2.5-1focal.20220209.151154).
+0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
+
+asadbek@ubuntu:~$ source /opt/ros/foxy/setup.sh
+ROS_DISTRO was set to 'noetic' before. Please make sure that the environment does not mix paths from different distributions.
+asadbek@ubuntu:~$ ros2 pkg executables turtlesim
+turtlesim draw_square
+turtlesim mimic
+turtlesim turtle_teleop_key
+turtlesim turtlesim_node
