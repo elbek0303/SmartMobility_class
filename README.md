@@ -472,3 +472,41 @@ Muhammadyusuf@ubuntu:~/ros2_ws$ ros2 run py_srvcli client 2 3 1
 Muhammadyusuf@ubuntu:~/ros2_ws$ 
 ```
 
+##### ACTION. Terminal for Turtlesim
+```
+Muhammadyusuf@Muhammadyusuf-virtual-machine:~$ # Replace ".bash" with your shell if you're not using bash
+# Possible values are: setup.bash, setup.sh, setup.zsh
+source /opt/ros/humble/setup.bash
+Muhammadyusuf@Muhammadyusuf-virtual-machine:~$ ros2 run turtlesim turtlesim_node
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[INFO] [1664894097.902534336] [turtlesim]: Starting turtlesim with node name /turtlesim
+[INFO] [1664894097.929237142] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+[INFO] [1664894122.950869168] [turtlesim]: Rotation goal completed successfully
+[INFO] [1664894123.221407241] [turtlesim]: Rotation goal completed successfully
+[INFO] [1664894123.572600221] [turtlesim]: Rotation goal completed successfully
+[INFO] [1664894123.781802796] [turtlesim]: Rotation goal completed successfully
+[INFO] [1664894123.942595878] [turtlesim]: Rotation goal completed successfully
+[INFO] [1664894124.101750008] [turtlesim]: Rotation goal completed successfully
+[WARN] [1664894135.620880179] [turtlesim]: Rotation goal received before a previous goal finished. Aborting previous goal
+[WARN] [1664894135.828265964] [turtlesim]: Rotation goal received before a previous goal finished. Aborting previous goal
+[WARN] [1664894136.563845683] [turtlesim]: Rotation goal received before a previous goal finished. Aborting previous goal
+```
+##### RUNNING A LUNCH FILE. OPENING A NEW TERMINAL AND RUNNING.
+```
+# turtlesim/launch/multisim.launch.py
+
+from launch import LaunchDescription
+import launch_ros.actions
+
+def generate_launch_description():
+    return LaunchDescription([
+        launch_ros.actions.Node(
+            namespace= "turtlesim1", package='turtlesim', executable='turtlesim_node', output='screen'),
+        launch_ros.actions.Node(
+            namespace= "turtlesim2", package='turtlesim', executable='turtlesim_node', output='screen'),
+    ])
+to control
+
+ros2 topic pub  /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.5}}"
+
+
