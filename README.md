@@ -1,7 +1,8 @@
 Updated Readme file.
 
 1.Installing turtle.
-asadbek@ubuntu:~$ sudo apt update
+
+Muhammadyusuf@ubuntu:~$ sudo apt update
 Hit:1 http://packages.microsoft.com/repos/code stable InRelease
 Hit:2 http://packages.ros.org/ros/ubuntu focal InRelease                        
 Hit:3 http://us.archive.ubuntu.com/ubuntu focal InRelease                       
