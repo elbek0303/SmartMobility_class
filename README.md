@@ -17,16 +17,16 @@ Building dependency tree
 Reading state information... Done
 26 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
-asadbek@ubuntu:~$ sudo apt install ros-foxy-turtlesim
+Muhammadyusuf@ubuntu:~$ sudo apt install ros-foxy-turtlesim
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 ros-foxy-turtlesim is already the newest version (1.2.5-1focal.20220209.151154).
 0 upgraded, 0 newly installed, 0 to remove and 26 not upgraded.
 
-asadbek@ubuntu:~$ source /opt/ros/foxy/setup.sh
+Muhammadyusuf@ubuntu:~$ source /opt/ros/foxy/setup.sh
 ROS_DISTRO was set to 'noetic' before. Please make sure that the environment does not mix paths from different distributions.
-asadbek@ubuntu:~$ ros2 pkg executables turtlesim
+Muhammadyusuf@ubuntu:~$ ros2 pkg executables turtlesim
 turtlesim draw_square
 turtlesim mimic
 turtlesim turtle_teleop_key
