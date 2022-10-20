@@ -82,7 +82,6 @@ Muhammadyusuf@ubuntu:~$
 ```
 
 
-#Using rqt function
 
 
 #remapping
